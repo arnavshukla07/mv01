@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BEST SONG EVER</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        /* Set background image */
+        body {
+            background-image: url('https://media.gq-magazine.co.uk/photos/64e335fa8651bb7da9ad3b0c/16:9/w_1600,c_limit/Max-verstappen-1.jpg'); /* Replace with your background URL */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style for the circular red button */
+        .red-button {
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 50%; /* Makes the button circular */
+            font-size: 50px;
+            font-family: 'Permanent Marker', cursive; /* Apply unique font */
+            line-height: 150px; /* Centers the text vertically */
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        /* Smaller font for 'CLICK' */
+        .red-button span {
+            font-size: 14px; /* Smaller font size */
+            font-family: 'Roboto', sans-serif; /* Different font for 'CLICK' */
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Hover effects */
+        .red-button:hover {
+            background-color: darkred;
+            transform: scale(1.1); /* Slightly enlarge the button */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Larger shadow */
+        }
+
+        /* Hide the audio player */
+        audio {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Red Circular Button -->
+    <a href="#" class="red-button" onclick="playSong()">
+        01
+        <span>CLICK</span>
+    </a>
+
+    <!-- Audio Element (hidden from view) -->
+    <audio id="song" src="mv.mp3" preload="auto"></audio>
+
+    <script>
+        // Function to play the song
+        function playSong() {
+            var song = document.getElementById('song');
+            song.play();
+        }
+    </script>
+
+</body>
+</html>
